@@ -1,0 +1,33 @@
+{
+  "name": "starter-hardhat",
+  "version": "1.0.0",
+  "description": "A Hardhat starter template for building hybrid dApps on TAC with smart contracts that can receive messages from TON.",
+  "main": "index.js",
+  "scripts": {
+    "test": "hardhat test",
+    "compile": "hardhat compile",
+    "deploy:testnet": "hardhat ignition deploy ignition/modules/SimpleMessage.ts --network tacTestnet",
+    "deploy:mainnet": "hardhat ignition deploy ignition/modules/SimpleMessage.ts --network tacMainnet"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TacBuild/starter-hardhat.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/TacBuild/starter-hardhat/issues"
+  },
+  "homepage": "https://github.com/TacBuild/starter-hardhat#readme",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox-viem": "^4.1.0",
+    "hardhat": "^2.26.1"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.4.0",
+    "@tonappchain/evm-ccl": "^0.9.26",
+    "dotenv": "^16.3.1"
+  }
+}
