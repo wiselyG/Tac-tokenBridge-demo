@@ -12,7 +12,8 @@ interface TonConnectProviderProps {
 
 export function TonConnectProvider({ children }: TonConnectProviderProps) {
   return (
-    <TonConnectUIProvider manifestUrl={manifestUrl}>
+    <TonConnectUIProvider manifestUrl={manifestUrl}
+      analytics={{mode:'off'}}>
       {children}
     </TonConnectUIProvider>
   );

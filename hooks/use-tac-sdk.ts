@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { useTonConnectUI } from '@tonconnect/ui-react';
-import { TacSdk, SenderFactory, type EvmProxyMsg, type AssetBridgingData, type TransactionLinker } from '@tonappchain/sdk';
+import { TacSdk, SenderFactory,StageName,OperationTracker, type EvmProxyMsg, type AssetBridgingData, type TransactionLinker } from '@tonappchain/sdk';
 import { tacSdkService } from '@/lib/tac-sdk';
 
 export interface CrossChainTransactionState {
@@ -68,8 +68,13 @@ export function useTacSdk() {
       const transactionLinker = await sdk.sendCrossChainTransaction(
         evmProxyMsg,
         sender,
-        assets || []
+        []
       );
+      const operationId = transactionLinker.operationId;
+      console.log("shard Key:",transactionLinker.shardsKey);
+      console.log("operationId:",operationId);
+      
+      
 
       setTransactionState(prev => ({
         ...prev,

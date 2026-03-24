@@ -27,7 +27,7 @@ export default function Home() {
           executes across chains.
         </p>
       </div>
-      <div className="flex gap-4">
+      <div className="flex flex-col gap-4 items-start ml-2.5">
         <CrossChainMessageButton />
         <Button variant={"outline"} size={"lg"}>
           Documentation

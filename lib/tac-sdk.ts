@@ -47,6 +47,7 @@ class TacSdkService {
   async cleanup(): Promise<void> {
     if (this.sdk) {
       try {
+        
         this.sdk.closeConnections();
       } catch (error) {
         console.error('Error closing TAC SDK connections:', error);
