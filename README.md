@@ -11,7 +11,7 @@ The sample contract is on dir `contracts/contracts`
 - TokenforTON.sol is a ERC20 token contract
 - MyProxy.sol is a Tac proxy contract
 
-u can deploy u own contract and update the contract address in `lib\contracts.ts`
+u can deploy u own contract and update the contract address in `lib/contracts.ts`
 
 Run this project use:
 ```bash
